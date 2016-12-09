@@ -1,0 +1,644 @@
+//GLOBAL
+html {
+    font-size: 12px;
+    @media screen and (min-width: 769px) {
+        font-size: 16px;
+    }
+}
+body {
+    background-color: white;
+}
+.container,
+.header-text,
+.nav-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+a {
+    &:link {
+        color: darkgrey;
+        text-decoration: none;
+        transition: 0.3s;
+        font-family: $opensans;
+    }
+    &:visited {
+        text-decoration: none;
+    }
+    &:hover {
+        color: $purple;
+        transition: 0.3s;
+    }
+}
+p {
+    font-family: $opensans;
+    color: $darkgrey;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 30px 30px;
+}
+// hero-image 
+.jumbotron {
+    background-image: url(../images/hero.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    padding-top: 80px;
+}
+.header-text {
+    color: #fff;
+    font-family: $playfair;
+    font-size: 5rem;
+    font-weight: normal;
+    text-align: left;
+    padding: 20px;
+}
+// navigation
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    z-index: 2;
+    border-bottom: 1px solid lightgray;
+    nav {
+        vertical-align: baseline;
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+                color: black;
+                line-height: 80px;
+                padding: 0 20px;
+                float: left;
+                &:last-child {
+                    line-height: 80px;
+                    float: right;
+                }
+            }
+        }
+    }
+    .logo {
+        display: inline-block;
+        height: 35px;
+        float: left;
+        margin: 20px;
+    }
+    button {
+        display: none;
+    }
+}
+// navigation - mobile
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        height: 50px;
+        position: fixed;
+        nav {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            left: 0;
+            top: 50px;
+            ul {
+                width: 100%;
+                float: none;
+                li {
+                    width: 100%;
+                    background-color: white;
+                    display: block;
+                    text-align: center;
+                    line-height: 40px;
+                }
+            }
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 5px;
+            border: none;
+            background-color: transparent;
+            padding: 10px;
+            float: right;
+            font-size: 16px;
+            color: $purple;
+        }
+        .logo {
+            display: inline-block;
+            height: 25px;
+            float: left;
+            margin: 10px;
+        }
+    }
+}
+.visible {
+    display: block;
+}
+.strike {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: $purple;
+    font-size: 3rem;
+    span {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        *display: inline;
+        *vertical-align: auto;
+        position: relative;
+        padding: 0 20px;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            position: absolute;
+            top: 0.73em;
+            border-top: 3px solid $purple;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            left: 100%;
+        }
+    }
+}
+// PANEL - flights
+.panel {
+    background-color: $purple;
+    box-shadow: 0px 30px 69.16px 6.84px rgba(4, 4, 4, 0.4);
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -50px;
+    @include flex;
+    justify-content: space-between;
+    align-content: space-between;
+    @media (max-width: 768px) {
+        margin-top: -150px;
+    }
+}
+form {
+    padding: 30px 0 30px 30px;
+    @include flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+    width: 100%;
+    > input {
+        padding: 50px;
+    }
+    div {
+        padding: 10px 0;
+        margin: 0 10px;
+        > img {
+            height: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        text-align: left;
+        padding: 5px;
+        flex-direction: column;
+    }
+}
+input[type=text] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #7c4a86;
+    padding: 10px 0;
+    margin: 10px;
+    color: #fff;
+    font-family: $opensans;
+    &::-webkit-input-placeholder {
+        color: #fff;
+    }
+    &::-moz-placeholder {
+        color: #fff;
+    }
+    &::-ms-input-placeholder {
+        color: #fff;
+    }
+    &::-moz-placeholder {
+        color: #fff;
+    }
+}
+input[type=search] {
+    border: 2px solid lightgrey;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+    &:focus {
+        border: 2px solid $purple;
+        transition: all 0.4s ease-in-out;
+    }
+}
+input[type="date"] {
+    border: 0;
+    background-color: transparent;
+    -webkit-align-items: center;
+    display: -webkit-inline-flex;
+    padding: 0;
+    color: #fff;
+    -webkit-padding-start: 1px;
+    &::-webkit-datetime-edit-month-field {
+        color: white;
+    }
+    &::-webkit-datetime-edit-day-field {
+        color: white;
+    }
+    &::-webkit-datetime-edit-year-field {
+        color: white;
+    }
+    &::-webkit-calendar-picker-indicator {
+        font-size: 18px;
+        &:hover {
+            background-color: $purple;
+        }
+    }
+    &::-webkit-datetime-edit {
+        -webkit-flex: 1;
+        -webkit-user-modify: read-only !important;
+        display: inline-block;
+        min-width: 0;
+        font-family: $opensans;
+    }
+    &::-webkit-datetime-edit-fields-wrapper {
+        -webkit-user-modify: read-only !important;
+        display: inline-block;
+        padding: 1px 0;
+    }
+}
+input[type=number] {
+    background: transparent;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+}
+input:focus,
+button:focus {
+    outline: 0;
+}
+input[type=text]:focus {
+    border-bottom: 1px solid #fff;
+    transition: border-bottom 0.6s;
+}
+.btn-send {
+    background-color: rgb(105, 21, 122);
+    box-shadow: -20px 0px 31px -9px rgba(0, 0, 0, 0.25);
+    min-width: 50px;
+    border: none;
+    > img {
+        height: 30px;
+    }
+}
+.subheading {
+    text-align: center;
+    font-family: $playfair;
+    color: #323232;
+    padding: 100px 0;
+    font-size: 5em;
+    font-weight: 100;
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        padding: 40px 0;
+    }
+}
+.icons {
+    @include flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.icons > img {
+    height: 100px;
+    margin-bottom: 100px;
+    @media screen and (max-width: 768px) {
+        height: 50px;
+        margin: 20px;
+    }
+}
+.btn-more {
+    border: 2px solid #69157a;
+    background-color: #fff;
+    padding: 20px;
+    color: #69157a;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: 0.4s;
+    &:hover {
+        border: 2px solid #69157a;
+        background-color: #69157a;
+        padding: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        transition: 0.4s;
+    }
+}
+.bg {
+    background-image: url("../images/bg.png");
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: inset 2px 177px 34px -148px rgba(0, 0, 0, 0.34);
+}
+
+
+// POPULAR DESTINATIONS
+.city-outer {
+    display: inline-block;
+    margin: 30px 40px;
+    @media screen and (max-width: 768px) {
+        margin: 10px;
+    }
+    transition: 0.4s;
+    &:hover {
+        .city-img {
+            transform: rotate(-10deg);
+            transition: 0.4s;
+        }
+        .city-img2 {
+            transform: rotate(-5deg);
+            transition: 0.4s;
+        }
+    }
+    h4 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $opensans;
+        font-weight: bold;
+        color: #797979;
+        margin-top: 50px;
+    }
+}
+.city-inner {
+    position: relative;
+}
+.city-img {
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ebebeb;
+    transition: 0.4s;
+    box-shadow: 2px 2px 3px 1px rgba(214, 214, 214, 1);
+}
+.city-img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ebebeb;
+    transition: 0.4s;
+    box-shadow: 2px 2px 3px 1px rgba(214, 214, 214, 1);
+}
+.city-img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ebebeb;
+    transition: 0.4s;
+    box-shadow: 2px 2px 3px 1px rgba(214, 214, 214, 1);
+    // MODAL BOXES - small boxes
+    .ny {
+        background-image: url(../images/ny.jpg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+    .dubai {
+        background-image: url(../images/dubai.jpeg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+    .paris {
+        background-image: url(../images/paris.jpg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+    .london {
+        background-image: url(../images/london.jpeg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+    .amsterdam {
+        background-image: url(../images/amsterdam.jpg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+    .rio {
+        background-image: url(../images/rio.jpeg);
+        background-size: cover;
+        background-position: 80% center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 10px solid #ebebeb;
+    }
+}
+
+// modal box 
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    overflow: auto;
+}
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 80%;
+    position: relative;
+    margin: 7% auto;
+    background: #fff;
+    border: 10px solid #ebebeb;
+}
+.modal-wrap {
+    @include flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    h2 {
+        font-family: $playfair;
+        font-size: 3em;
+        font-weight: 100;
+    }
+    .modal-inner {
+        height: 70%;
+    }
+    p {
+        color: #787878;
+        font-size: 12px;
+        text-align: justify;
+        padding: 20px;
+    }
+    img {
+        float: left;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @media screen and (max-width: 768px) {
+            max-height: 250px;
+        }
+    }
+    .btn-more {
+        float: right;
+        margin: 20px;
+    }
+}
+.close {
+    background: $purple;
+    color: #fff;
+    line-height: 45px;
+    position: absolute;
+    right: -25px;
+    text-align: center;
+    top: -25px;
+    width: 44px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 22px;
+}
+.close:hover {
+    background: #fff;
+    color: $purple;
+    border: 1px solid $purple;
+}
+// SLIDER
+
+//slides
+.slide-1 {
+    background-image: url(https://s15.postimg.org/5760uxoqj/food_vacation_boats_lunch.jpg);
+    background-size: cover;
+    height: 500px;
+}
+.slide-2 {
+    background-image: url(https://s12.postimg.org/e2er9be59/gallery_1.png);
+    background-size: cover;
+    height: 500px;
+}
+.slide-3 {
+    background-image: url(https://s12.postimg.org/rklnllqal/gallery_2.png
+);
+    background-size: cover;
+    height: 500px;
+}
+.slide-4 {
+    background-image: url(https://s12.postimg.org/sbedrdsnx/gallery_3.png);
+    background-size: cover;
+    height: 500px;
+}
+.slick-slide {
+    border: 10px solid white;
+    margin: 10px;
+    outline: 0;
+}
+.slick-current {
+    border: 10px solid #b3b3b3;
+    box-shadow: 0px 0px 10px 1px $shadow;
+}
+//quote inside slides
+.quote {
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    margin-top: 100px;
+    @include flex;
+    justify-content: center;
+    .quote-inner {
+        align-content: flex-end;
+    }
+    p {
+        font-size: 12px;
+        padding: 10px;
+        margin: 10px;
+    }
+    img {
+        align-content: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: -50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .up-quo {
+        font-size: 45px;
+        float: left;
+    }
+    .down-quo {
+        font-size: 45px;
+        float: right;
+    }
+}
+
+
+// BIG QUOTE
+.quote-sign {
+    color: $purple;
+    text-align: center;
+    font-size: 5rem;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.quote-big {
+    font-size: 3rem;
+    font-family: $playfair;
+    color: #9f9e9e;
+    text-align: center;
+    font-weight: 100;
+    padding-bottom: 50px;
+}

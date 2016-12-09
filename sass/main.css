@@ -1,0 +1,694 @@
+/* line 1, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_reset.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*    border: 1px solid blue;*/ }
+
+/* line 2, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+html {
+  font-size: 12px; }
+  @media screen and (min-width: 769px) {
+    /* line 2, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    html {
+      font-size: 16px; } }
+
+/* line 8, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+body {
+  background-color: white; }
+
+/* line 13, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.container,
+.header-text,
+.nav-wrap {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/* line 17, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.container-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center; }
+
+/* line 23, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+a:link {
+  color: darkgrey;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "Open Sans", sans-serif; }
+
+/* line 29, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+a:visited {
+  text-decoration: none; }
+
+/* line 32, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+a:hover {
+  color: #500e5e;
+  transition: 0.3s; }
+
+/* line 37, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #323232;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 30px 30px; }
+
+/* line 45, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.jumbotron {
+  background-image: url(../images/hero.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh;
+  padding-top: 80px; }
+
+/* line 52, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.header-text {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 5rem;
+  font-weight: normal;
+  text-align: left;
+  padding: 20px; }
+
+/* line 61, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  z-index: 2;
+  border-bottom: 1px solid lightgray; }
+  /* line 68, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  header nav {
+    vertical-align: baseline; }
+    /* line 70, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    header nav ul {
+      list-style-type: none; }
+      /* line 72, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+      header nav ul li {
+        display: inline-block;
+        color: black;
+        line-height: 80px;
+        padding: 0 20px;
+        float: left; }
+        /* line 78, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+        header nav ul li:last-child {
+          line-height: 80px;
+          float: right; }
+  /* line 85, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  header .logo {
+    display: inline-block;
+    height: 35px;
+    float: left;
+    margin: 20px; }
+  /* line 91, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  header button {
+    display: none; }
+
+@media (max-width: 768px) {
+  /* line 97, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  header {
+    position: relative;
+    height: 50px;
+    position: fixed; }
+    /* line 101, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    header nav {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      left: 0;
+      top: 50px; }
+      /* line 108, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+      header nav ul {
+        width: 100%;
+        float: none; }
+        /* line 111, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+        header nav ul li {
+          width: 100%;
+          background-color: white;
+          display: block;
+          text-align: center;
+          line-height: 40px; }
+    /* line 120, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    header button {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 5px;
+      border: none;
+      background-color: transparent;
+      padding: 10px;
+      float: right;
+      font-size: 16px;
+      color: #500e5e; }
+    /* line 132, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    header .logo {
+      display: inline-block;
+      height: 25px;
+      float: left;
+      margin: 10px; } }
+
+/* line 140, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.visible {
+  display: block; }
+
+/* line 143, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.strike {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  color: #500e5e;
+  font-size: 3rem; }
+  /* line 151, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .strike span {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    position: relative;
+    padding: 0 20px; }
+    /* line 160, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .strike span:before,
+    .strike span:after {
+      content: '';
+      display: block;
+      width: 1000px;
+      position: absolute;
+      top: 0.73em;
+      border-top: 3px solid #500e5e; }
+    /* line 168, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .strike span:before {
+      right: 100%; }
+    /* line 171, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .strike span:after {
+      left: 100%; }
+
+/* line 177, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.panel {
+  background-color: #500e5e;
+  box-shadow: 0px 30px 69.16px 6.84px rgba(4, 4, 4, 0.4);
+  z-index: 2;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between; }
+  @media (max-width: 768px) {
+    /* line 177, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .panel {
+      margin-top: -150px; } }
+
+/* line 192, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+form {
+  padding: 30px 0 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  width: 100%; }
+  /* line 199, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  form > input {
+    padding: 50px; }
+  /* line 202, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  form div {
+    padding: 10px 0;
+    margin: 0 10px; }
+    /* line 205, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    form div > img {
+      height: 20px; }
+  @media (max-width: 768px) {
+    /* line 192, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    form {
+      text-align: left;
+      padding: 5px;
+      flex-direction: column; } }
+
+/* line 215, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input[type=text] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #7c4a86;
+  padding: 10px 0;
+  margin: 10px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif; }
+  /* line 223, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type=text]::-webkit-input-placeholder {
+    color: #fff; }
+  /* line 226, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type=text]::-moz-placeholder {
+    color: #fff; }
+  /* line 229, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type=text]::-ms-input-placeholder {
+    color: #fff; }
+  /* line 232, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type=text]::-moz-placeholder {
+    color: #fff; }
+
+/* line 236, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input[type=search] {
+  border: 2px solid lightgrey;
+  padding: 10px;
+  transition: all 0.4s ease-in-out; }
+  /* line 240, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type=search]:focus {
+    border: 2px solid #500e5e;
+    transition: all 0.4s ease-in-out; }
+
+/* line 245, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input[type="date"] {
+  border: 0;
+  background-color: transparent;
+  -webkit-align-items: center;
+  display: -webkit-inline-flex;
+  padding: 0;
+  color: #fff;
+  -webkit-padding-start: 1px; }
+  /* line 253, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-datetime-edit-month-field {
+    color: white; }
+  /* line 256, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-datetime-edit-day-field {
+    color: white; }
+  /* line 259, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-datetime-edit-year-field {
+    color: white; }
+  /* line 262, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 18px; }
+    /* line 264, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      background-color: #500e5e; }
+  /* line 268, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-datetime-edit {
+    -webkit-flex: 1;
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    min-width: 0;
+    font-family: "Open Sans", sans-serif; }
+  /* line 275, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    -webkit-user-modify: read-only !important;
+    display: inline-block;
+    padding: 1px 0; }
+
+/* line 281, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input[type=number] {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  padding: 10px; }
+
+/* line 288, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input:focus,
+button:focus {
+  outline: 0; }
+
+/* line 291, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+input[type=text]:focus {
+  border-bottom: 1px solid #fff;
+  transition: border-bottom 0.6s; }
+
+/* line 295, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.btn-send {
+  background-color: #69157a;
+  box-shadow: -20px 0px 31px -9px rgba(0, 0, 0, 0.25);
+  min-width: 50px;
+  border: none; }
+  /* line 300, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .btn-send > img {
+    height: 30px; }
+
+/* line 304, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.subheading {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #323232;
+  padding: 100px 0;
+  font-size: 5em;
+  font-weight: 100; }
+  @media screen and (max-width: 768px) {
+    /* line 304, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .subheading {
+      font-size: 2rem;
+      padding: 40px 0; } }
+
+/* line 316, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between; }
+
+/* line 321, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.icons > img {
+  height: 100px;
+  margin-bottom: 100px; }
+  @media screen and (max-width: 768px) {
+    /* line 321, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .icons > img {
+      height: 50px;
+      margin: 20px; } }
+
+/* line 329, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.btn-more {
+  border: 2px solid #69157a;
+  background-color: #fff;
+  padding: 20px;
+  color: #69157a;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: 0.4s; }
+  /* line 341, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .btn-more:hover {
+    border: 2px solid #69157a;
+    background-color: #69157a;
+    padding: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transition: 0.4s; }
+
+/* line 354, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.bg {
+  background-image: url("../images/bg.png");
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: inset 2px 177px 34px -148px rgba(0, 0, 0, 0.34); }
+
+/* line 365, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.city-outer {
+  display: inline-block;
+  margin: 30px 40px;
+  transition: 0.4s; }
+  @media screen and (max-width: 768px) {
+    /* line 365, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .city-outer {
+      margin: 10px; } }
+  /* line 373, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-outer:hover .city-img {
+    transform: rotate(-10deg);
+    transition: 0.4s; }
+  /* line 377, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-outer:hover .city-img2 {
+    transform: rotate(-5deg);
+    transition: 0.4s; }
+  /* line 382, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-outer h4 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #797979;
+    margin-top: 50px; }
+
+/* line 391, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.city-inner {
+  position: relative; }
+
+/* line 394, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.city-img {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #ebebeb;
+  transition: 0.4s;
+  box-shadow: 2px 2px 3px 1px #d6d6d6; }
+
+/* line 403, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.city-img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #ebebeb;
+  transition: 0.4s;
+  box-shadow: 2px 2px 3px 1px #d6d6d6; }
+
+/* line 413, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.city-img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #ebebeb;
+  transition: 0.4s;
+  box-shadow: 2px 2px 3px 1px #d6d6d6; }
+  /* line 423, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .ny {
+    background-image: url(../images/ny.jpg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+  /* line 432, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .dubai {
+    background-image: url(../images/dubai.jpeg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+  /* line 441, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .paris {
+    background-image: url(../images/paris.jpg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+  /* line 450, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .london {
+    background-image: url(../images/london.jpeg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+  /* line 459, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .amsterdam {
+    background-image: url(../images/amsterdam.jpg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+  /* line 468, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .city-img3 .rio {
+    background-image: url(../images/rio.jpeg);
+    background-size: cover;
+    background-position: 80% center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 10px solid #ebebeb; }
+
+/* line 480, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  overflow: auto; }
+
+/* line 495, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto; }
+
+/* line 499, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.modalDialog > div {
+  width: 80%;
+  position: relative;
+  margin: 7% auto;
+  background: #fff;
+  border: 10px solid #ebebeb; }
+
+/* line 506, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.modal-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 768px) {
+    /* line 506, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+    .modal-wrap {
+      flex-direction: column; } }
+  /* line 512, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .modal-wrap h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    font-weight: 100; }
+  /* line 517, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .modal-wrap .modal-inner {
+    height: 70%; }
+  /* line 520, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .modal-wrap p {
+    color: #787878;
+    font-size: 12px;
+    text-align: justify;
+    padding: 20px; }
+  /* line 526, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .modal-wrap img {
+    float: left;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+    @media screen and (max-width: 768px) {
+      /* line 526, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+      .modal-wrap img {
+        max-height: 250px; } }
+  /* line 536, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .modal-wrap .btn-more {
+    float: right;
+    margin: 20px; }
+
+/* line 541, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.close {
+  background: #500e5e;
+  color: #fff;
+  line-height: 45px;
+  position: absolute;
+  right: -25px;
+  text-align: center;
+  top: -25px;
+  width: 44px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 22px; }
+
+/* line 554, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.close:hover {
+  background: #fff;
+  color: #500e5e;
+  border: 1px solid #500e5e; }
+
+/* line 562, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slide-1 {
+  background-image: url(https://s15.postimg.org/5760uxoqj/food_vacation_boats_lunch.jpg);
+  background-size: cover;
+  height: 500px; }
+
+/* line 567, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slide-2 {
+  background-image: url(https://s12.postimg.org/e2er9be59/gallery_1.png);
+  background-size: cover;
+  height: 500px; }
+
+/* line 572, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slide-3 {
+  background-image: url(https://s12.postimg.org/rklnllqal/gallery_2.png);
+  background-size: cover;
+  height: 500px; }
+
+/* line 578, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slide-4 {
+  background-image: url(https://s12.postimg.org/sbedrdsnx/gallery_3.png);
+  background-size: cover;
+  height: 500px; }
+
+/* line 583, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slick-slide {
+  border: 10px solid white;
+  margin: 10px;
+  outline: 0; }
+
+/* line 588, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.slick-current {
+  border: 10px solid #b3b3b3;
+  box-shadow: 0px 0px 10px 1px #bfbfbf; }
+
+/* line 593, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.quote {
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center; }
+  /* line 601, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .quote .quote-inner {
+    align-content: flex-end; }
+  /* line 604, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .quote p {
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px; }
+  /* line 609, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .quote img {
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: -50px;
+    border-radius: 50%;
+    object-fit: cover; }
+  /* line 618, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .quote .up-quo {
+    font-size: 45px;
+    float: left; }
+  /* line 622, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+  .quote .down-quo {
+    font-size: 45px;
+    float: right; }
+
+/* line 630, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.quote-sign {
+  color: #500e5e;
+  text-align: center;
+  font-size: 5rem;
+  margin: 0 auto;
+  font-weight: bold; }
+
+/* line 637, C:/Users/Patrycja/Desktop/programming/patrycjakubiczek.github.io/projects/flywithus/sass/partials/_base.scss */
+.quote-big {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: #9f9e9e;
+  text-align: center;
+  font-weight: 100;
+  padding-bottom: 50px; }
+
+/*# sourceMappingURL=main.css.map */

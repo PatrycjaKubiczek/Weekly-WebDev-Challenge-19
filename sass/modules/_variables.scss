@@ -1,0 +1,23 @@
+//fonts 
+$playfair: 'Playfair Display', serif;
+$opensans: 'Open Sans', sans-serif;
+
+//colors
+
+$purple: #500e5e;
+$darkgrey: #323232;
+
+$shadow: rgba(191,191,191,1);
+
+@mixin flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
